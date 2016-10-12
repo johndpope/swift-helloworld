@@ -53,7 +53,9 @@ do {
     counter = counter + 1
     print("<<<<<<<<<<<<<<<<<<")
     print("Request #: \(counter).")
+    // swiftlint:disable line_length
     print("Accepted connection from: \(clientSocket.remoteHostname) on port \(clientSocket.remotePort).")
+    // swiftlint:enable line_length
     print("Number of bytes receieved from client: \(numberOfBytes)")
     try clientSocket.write(from: httpResponse)
     clientSocket.close()
